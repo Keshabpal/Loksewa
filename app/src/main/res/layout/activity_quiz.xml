@@ -11,6 +11,7 @@
         android:id="@+id/txt_score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:freezesText="true"
         android:text="Score: 0"
         android:textColor="@android:color/black" />
 
@@ -18,51 +19,70 @@
         android:id="@+id/txt_question_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_score"
+        android:freezesText="true"
         android:text="Question: 1/x"
-        android:textColor="@android:color/black"
-        android:layout_below="@+id/txt_score" />
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/txt_difficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_question_count"
+        android:freezesText="true"
+        android:text="Difficulty: "
+        android:textColor="@android:color/black" />
+
 
     <TextView
         android:id="@+id/txt_countdown"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="40sp"
-        android:textColor="@android:color/black"
+        android:layout_alignParentEnd="true"
+        android:freezesText="true"
         android:text="00:30"
-        android:layout_alignParentEnd="true"/>
+        android:textColor="@android:color/black"
+        android:textSize="40sp" />
 
     <TextView
         android:id="@+id/txt_question"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Here will be the question text\nHere will be the question text\nHere will be the question text"
-        android:textSize="16sp"
-        android:textColor="@android:color/black"
         android:layout_above="@id/radio_group"
         android:layout_marginBottom="16dp"
-        android:textAlignment="center" />
+        android:freezesText="true"
+        android:text="Here will be the question text\nHere will be the question text\nHere will be the question text"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
 
     <RadioGroup
         android:id="@+id/radio_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true">
+        android:layout_centerVertical="true"
+        android:freezesText="true">
 
         <RadioButton
             android:id="@+id/btn_option1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="option 1"/>
+            android:freezesText="true"
+            android:text="option 1" />
+
         <RadioButton
             android:id="@+id/btn_option2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="option 2"/>
+            android:freezesText="true"
+            android:text="option 2" />
+
         <RadioButton
             android:id="@+id/btn_option3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="option 3"/>
+            android:freezesText="true"
+            android:text="option 3" />
 
 
     </RadioGroup>
@@ -71,9 +91,10 @@
         android:id="@+id/btn_confirm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Confirm"
         android:layout_below="@id/radio_group"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        android:freezesText="true"
+        android:text="Confirm" />
 
 
 </RelativeLayout>
